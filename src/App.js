@@ -29,7 +29,7 @@ function App() {
               <Login></Login>
               
             </Route>
-            <Route path="/booking/:placeId">
+            <Route path="/placeDetails/:placeId">
               <PlaceDetail></PlaceDetail>  
             </Route>
             <Route exact path="/">

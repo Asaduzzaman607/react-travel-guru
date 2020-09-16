@@ -1,0 +1,13 @@
+.login-page{
+    text-align: center;
+    margin: 60px auto;
+    width: 570px;
+    height: 457px;
+    left: 438px;
+    top: 171px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid #ABABAB;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 40px;
+}

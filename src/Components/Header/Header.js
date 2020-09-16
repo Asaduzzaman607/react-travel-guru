@@ -5,6 +5,7 @@ import fakeData from '../../fakeData/fakeData';
 import { Button, Card, FormControl } from '@material-ui/core';
 import { Form, Nav, Navbar } from 'react-bootstrap';
 import Home from '../Home/Home';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     console.log(fakeData)
@@ -12,29 +13,34 @@ const Header = () => {
     return (
         
             <section className="header" style={{ height: '933px', width: '100%'}} >
-                    <Navbar className="navbar" bg="transparent"  expand="lg">
-                        <Navbar.Brand href='#home'>  <img className="travel-logo" src={Logo} alt=""/> </Navbar.Brand>
+                   <Navbar className="navbar" bg="transparent" expand="lg">
+                        <Navbar.Brand href="#home"><img className="travel-logo" src={Logo} alt="travel-logo"></img></Navbar.Brand>
+                        <Form inline>
+                                <FormControl style={{color: 'white'}} type="text" placeholder="Search Your Destination" className="mr-sm-2" />
+                                <Button style={{color: 'white'}}>Search</Button>
+                            </Form>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                        <Navbar.Collapse  id="basic-navbar-nav">
-                            <Nav className="mr-auto">
-                            <Form inline>
-                            <FormControl type="text" style={{color: 'white'}} placeholder="Search" className="mr-sm-2" />
-                            <Button variant="outline-success">Search your Destination</Button>
-                            </Form>
+                        <Navbar.Collapse id="basic-navbar-nav">
+                           
+                            <Nav className="mr-auto title">
+                            
+                                <Nav.Link style={{color: 'white'}} href="#home">News</Nav.Link>
+                                <Nav.Link style={{color: 'white'}}href="#link">Destination</Nav.Link>
+                                <Nav.Link style={{color: 'white'}}href="#link">Blog</Nav.Link>
+                                <Nav.Link style={{color: 'white'}} href="#link">Contact</Nav.Link>
+                                
                             </Nav>
-                            <Form inline>
-                            <Nav.Link href="#home">News</Nav.Link>
-                            <Nav.Link href="#link">Destination</Nav.Link>
-                            <Nav.Link href="#link">Blog</Nav.Link>
-                            <Nav.Link href="#link">Contact</Nav.Link>
-                            <Button variant="outline-success">Login</Button>
-                            </Form>
+                            <Link to="/login"><Button style={{backgroundColor: '#F9A51A',width: '104px',height: '44px',borderRadius: '5px',padding: '12px 29px'}}>Login</Button></Link>
+                            
+                            
                         </Navbar.Collapse>
-                        </Navbar>
+                    </Navbar>
                         <div class="container">
                           <div class="row">
-                            <div class="col-3">
-                                One of three columns
+                            <div style={{color: 'white'}} class="col-3">
+                                <h2>Cox's Bazar</h2>
+                                <p>Cox's Bazar has the world's largest unbroken sea beach which stretches more than 120 km. The entire beach is a stretch of golden sandy sea beach which is reachable by motorbike. The beach gets busy from November to early March.</p>
+                                <Button style={{backgroundColor: '#F9A51A',width: '150px',height: '44px',borderRadius: '5px',padding: '12px 29px'}}>Booking -></Button>
                             </div>
                          <div class="col-9">
                             {

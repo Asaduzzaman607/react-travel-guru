@@ -34,23 +34,13 @@ const PlaceDetail = () => {
                     <p>{description}</p>
                 </Col>
                 <Col xs={12} md={8}>
+        
                 <TimePicker></TimePicker>
                 </Col>
             </Row>
             
 
         </div>
-        // <div className="detail-info">
-        //     <div className="location-info">
-                 
-                    
-
-        //     </div>
-        //     <div className='date-info'>
-
-        //     </div>
-            
-        // </div>
     );
 };
 

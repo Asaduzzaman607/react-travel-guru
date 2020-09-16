@@ -11,17 +11,17 @@ const Home = (props) => {
 
     
     return (
-          <div className="place-body" >
+      <div className="place-body" >
               
-                  <Link to={`/booking/${key}`}>
-                  <div style={{ backgroundImage: `url(${imagee})` }} className="card">
-                    <div className="container">
-                      <h4><b>{name}</b></h4>
-                    </div>
-                    </div>   
-                  </Link>
+      <Link to={`/placeDetails/${key}`}>
+      <div style={{ backgroundImage: `url(${imagee})` }} className="card">
+        <div className="container">
+          <h4><b>{name}</b></h4>
+        </div>
+        </div>   
+      </Link>
 
-               </div>
+   </div>
         
         
     );
