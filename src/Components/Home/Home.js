@@ -1,26 +1,27 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import fakeData from '../../fakeData/fakeData';
-import Header from '../Header/Header';
+import './Home.css'
+
 
 const Home = (props) => {
 
     const {key,name,description} = props.place
     console.log(props.place)
+    const imagee= props.place.image
 
     
     return (
-          <div className="row" >
-               <div className="col-4">
-               <h2>Name: {name}</h2>
-               <p>{description}</p>
-                  
-               </div>
-               <div className="col-8">
-                  <Link to={`/booking/${key}`}><button>{name}</button> </Link>
+          <div className="place-body" >
+              
+                  <Link to={`/booking/${key}`}>
+                  <div style={{ backgroundImage: `url(${imagee})` }} className="card">
+                    <div className="container">
+                      <h4><b>{name}</b></h4>
+                    </div>
+                    </div>   
+                  </Link>
 
                </div>
-          </div>
         
         
     );

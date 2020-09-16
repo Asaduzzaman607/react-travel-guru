@@ -16,13 +16,13 @@ function App() {
   const [loggedInUser, setLoggedInUser] = useState({})
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]} >
-      <p>Name: {loggedInUser.name}</p>
+      
     <Router>
       {/* <Home></Home> */}
-      <Login></Login>
+      {/* <Login></Login> */}
       
       <Switch>
-            <Route path="/booking">
+            <Route exact path="/booking">
               
             </Route>
             <Route path="/login">

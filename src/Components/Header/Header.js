@@ -12,13 +12,13 @@ const Header = () => {
     return (
         
             <section className="header" style={{ height: '933px', width: '100%'}} >
-                    <Navbar bg="transparent"  expand="lg">
-                        {/* <Navbar.Brand> <img className="img-fluid" src={Logo} alt=""/> </Navbar.Brand> */}
+                    <Navbar className="navbar" bg="transparent"  expand="lg">
+                        <Navbar.Brand href='#home'>  <img className="travel-logo" src={Logo} alt=""/> </Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                        <Navbar.Collapse id="basic-navbar-nav">
+                        <Navbar.Collapse  id="basic-navbar-nav">
                             <Nav className="mr-auto">
                             <Form inline>
-                            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+                            <FormControl type="text" style={{color: 'white'}} placeholder="Search" className="mr-sm-2" />
                             <Button variant="outline-success">Search your Destination</Button>
                             </Form>
                             </Nav>
@@ -31,13 +31,19 @@ const Header = () => {
                             </Form>
                         </Navbar.Collapse>
                         </Navbar>
-        
-                            <div className='row'>
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-3">
+                                One of three columns
+                            </div>
+                         <div class="col-9">
                             {
                                 fakeData.map(place=> <Home place={place} ></Home>)
                             } 
 
                             </div>
+                      </div>
+                </div>
       
             
 
