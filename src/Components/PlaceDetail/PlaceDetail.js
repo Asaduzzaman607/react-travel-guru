@@ -52,7 +52,9 @@ const PlaceDetail = () => {
                                 <Form.Label style={{color:'grey'}}>Destination</Form.Label>
                                 <Form.Control style={{fontWeight:'bold', color:'black'}}value={name} type="origin"  />
                             </Form.Group>
+
                             <TimePicker></TimePicker>
+                            
                             <Link to='/hotelDetails'>
                             <button className="yellow-btn" type="submit">
                                 Start Booking
