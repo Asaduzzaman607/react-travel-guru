@@ -33,8 +33,9 @@ const PlaceDetail = () => {
     return (
 
         <section className="bg-darker" style={{height: '920px', width: '100%' }} >
-           <NavBarDark></NavBarDark>
-            <div className="row">
+            <div style={{ width:'80%',  margin:'auto'}}>
+            <NavBarDark></NavBarDark>
+            <div className="row" >
                 <div className="col-md-5 col-sm-12 travel-place-description">
                     <h1 style={{color: 'white'}} >{name}</h1>
                     <p style={{color: 'white'}} >{description}</p>
@@ -61,6 +62,9 @@ const PlaceDetail = () => {
                     </div>
                 </div>
             </div>
+
+            </div>
+           
         </section>
     );
 };

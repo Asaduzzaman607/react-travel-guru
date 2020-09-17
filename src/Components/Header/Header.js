@@ -13,7 +13,8 @@ const Header = () => {
     return (
         
             <section className="header" style={{ height: '920px', width: '100%'}} >
-                   <Navbar className="navbar" bg="transparent" expand="lg">
+                <div style={{ width:'80%',  margin:'auto'}}>
+                <Navbar className="navbar" bg="transparent" expand="lg">
                         <Navbar.Brand href="/home"><img className="travel-logo" src={Logo} alt="travel-logo"></img></Navbar.Brand>
                         <Form inline>
                                 <FormControl  style={{color: 'white'}} type="text" placeholder="Search Your Destination" className="mr-sm-2" />
@@ -52,6 +53,9 @@ const Header = () => {
                       </div>
                 </div>
       
+
+                </div>
+                   
             
 
             </section>    
