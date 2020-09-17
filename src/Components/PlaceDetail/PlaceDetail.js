@@ -32,17 +32,17 @@ const PlaceDetail = () => {
 
     return (
 
-        <section className="bg-darker" style={{height: '920px', width: '100%' }} >
-            <div style={{ width:'80%',  margin:'auto'}}>
+        <section className="bg-darker" >
+            <div style={{ width:'90%',  margin:'auto'}}>
             <NavBarDark></NavBarDark>
-            <div className="row" >
+            <div className="row detail" >
                 <div className="col-md-5 col-sm-12 travel-place-description">
-                    <h1 style={{color: 'white'}} >{name}</h1>
+                    <h1 style={{color: 'white',textTransform: 'uppercase'}} >{name}</h1>
                     <p style={{color: 'white'}} >{description}</p>
                 </div>
                 <div className="col-md-7 col-sm-12">
                     <div className="booking-card">
-                        <Form>
+                        <Form className="form">
                             <Form.Group>
                                 <Form.Label style={{color:'grey'}}>Origin</Form.Label>
                                 <Form.Control style={{fontWeight:'bold', color:'black'}} value="Dhaka" type="origin"/>
@@ -50,11 +50,9 @@ const PlaceDetail = () => {
 
                             <Form.Group>
                                 <Form.Label style={{color:'grey'}}>Destination</Form.Label>
-                                <Form.Control style={{fontWeight:'bold', color:'black'}}value={name} type="origin"  />
+                                <Form.Control style={{fontWeight:'bold', color:'black'}} value={name} type="origin"  />
                             </Form.Group>
-
-                            <TimePicker></TimePicker>
-                            
+                            <TimePicker></TimePicker>                  
                             <Link to='/hotelDetails'>
                             <button className="yellow-btn" type="submit">
                                 Start Booking

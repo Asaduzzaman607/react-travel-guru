@@ -1,5 +1,6 @@
 .place-body{
     display: inline-block;
+    margin-bottom:135px;
 }
 
 .card {
@@ -8,7 +9,7 @@
     display:inline-block;
     height:300px;
     margin:10px;
-    width:200px;
+    width:180px;
     border-radius:20px;
     /* background: linear-gradient(0.12deg, #000000 0.1%, rgba(0, 0, 0, 0) 69.96%); */
   }
@@ -26,4 +27,5 @@
   
   .container {
     padding: 2px 16px;
+    
   }

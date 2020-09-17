@@ -22,6 +22,16 @@ var data= [
         image:"https://i.ibb.co/F4cwTT4/sundorbon.png",
         lat:22.0627,
         lng:88.0833,
+        
+    },
+    {
+        key: 4,
+        name: "Sajek",
+        description: "Sajek is one of the most natural beauties of beautiful Bangladesh. This Forest is the largest mangrove forest in the world. Sundarban is a large block of littoral forests. The beauty lies in its unique natural surroundings.",
+        image:"https://i.ibb.co/k3sKpQt/Sajek.png",
+        lat:23.3820,
+        lng:92.2938
+        
     }
 ]
 export default data;

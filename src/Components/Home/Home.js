@@ -6,7 +6,7 @@ import './Home.css'
 const Home = (props) => {
 
     const {key,name,description} = props.place
-    console.log(props.place)
+   
     const imagee= props.place.image
 
     

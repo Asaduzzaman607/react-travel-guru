@@ -13,11 +13,13 @@ const Map = () => {
 
     const placeArray = fakeData.filter(plc => parseInt(plc.key) === parseInt(place))
     console.log(place)
+
     const lattitude = placeArray[0].lat
     const longitude = placeArray[0].lng
+    
     return (
       // Important! Always set the container height explicitly
-      <div style={{ height: '100vh', width: '100%' }}>
+      <div style={{ height: '80vh', width: '70%' }}>
         <GoogleMapReact
           bootstrapURLKeys={{ key: 'AIzaSyDixoOe6wrfAs7rvOl0NroxnRfauUFMakU' }}
           defaultCenter={{lat:parseInt(lattitude),lng:parseInt(longitude)}}

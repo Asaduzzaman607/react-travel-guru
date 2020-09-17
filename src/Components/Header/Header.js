@@ -6,15 +6,15 @@ import { Button, Card, FormControl } from '@material-ui/core';
 import { Form, Nav, Navbar } from 'react-bootstrap';
 import Home from '../Home/Home';
 import { Link } from 'react-router-dom';
+import Cox from '../../images/location/Cox.png'
 
 const Header = () => {
     console.log(fakeData)
 
     return (
-        
-            <section className="header" style={{ height: '920px', width: '100%'}} >
-                <div style={{ width:'80%',  margin:'auto'}}>
-                <Navbar className="navbar" bg="transparent" expand="lg">
+       
+            <div className="header" >
+                <Navbar className="navbarr" bg="transparent" expand="lg">
                         <Navbar.Brand href="/home"><img className="travel-logo" src={Logo} alt="travel-logo"></img></Navbar.Brand>
                         <Form inline>
                                 <FormControl  style={{color: 'white'}} type="text" placeholder="Search Your Destination" className="mr-sm-2" />
@@ -37,28 +37,29 @@ const Header = () => {
                             
                         </Navbar.Collapse>
                     </Navbar>
-                        <div class="container">
-                          <div class="row">
-                            <div style={{color: 'white'}} class="col-3">
-                                <h2>Cox's Bazar</h2>
+                    <div class="container">
+                    <div class="row travel-place-cards">
+                            <div style={{color: 'white'}} class="col-xl-3 col-md-4 col-sm-12">
+                                <h1 style={{fontWeight:'bold'}}>Cox's Bazar</h1>
                                 <p>Cox's Bazar has the world's largest unbroken sea beach which stretches more than 120 km. The entire beach is a stretch of golden sandy sea beach which is reachable by motorbike. The beach gets busy from November to early March.</p>
                                 <Button style={{backgroundColor: '#F9A51A',width: '150px',height: '44px',borderRadius: '5px',padding: '12px 29px'}}>Booking -></Button>
                             </div>
-                         <div class="col-9">
+                         <div class="col-xl-9 col-md-8 col-sm-12">
                             {
                                 fakeData.map(place=> <Home place={place} ></Home>)
                             } 
 
                             </div>
                       </div>
-                </div>
-      
 
-                </div>
-                   
+                    </div>
+               
+            </div>
+
+        
             
-
-            </section>    
+                
+             
       
     );
 };
