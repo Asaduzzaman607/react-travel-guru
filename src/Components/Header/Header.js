@@ -12,25 +12,26 @@ const Header = () => {
 
     return (
         
-            <section className="header" style={{ height: '933px', width: '100%'}} >
+            <section className="header" style={{ height: '920px', width: '100%'}} >
                    <Navbar className="navbar" bg="transparent" expand="lg">
-                        <Navbar.Brand href="#home"><img className="travel-logo" src={Logo} alt="travel-logo"></img></Navbar.Brand>
+                        <Navbar.Brand href="/home"><img className="travel-logo" src={Logo} alt="travel-logo"></img></Navbar.Brand>
                         <Form inline>
-                                <FormControl style={{color: 'white'}} type="text" placeholder="Search Your Destination" className="mr-sm-2" />
-                                <Button style={{color: 'white'}}>Search</Button>
+                                <FormControl  style={{color: 'white'}} type="text" placeholder="Search Your Destination" className="mr-sm-2" />
+                                <Button style={{color: 'white',backgroundColor: 'transparent',border: '1px solid grey'}}>Search Your Destination</Button>
                             </Form>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                            
                             <Nav className="mr-auto title">
                             
-                                <Nav.Link style={{color: 'white'}} href="#home">News</Nav.Link>
+                                
+                            </Nav>
+                            
+                               <Nav.Link style={{color: 'white'}} href="#home">News</Nav.Link>
                                 <Nav.Link style={{color: 'white'}}href="#link">Destination</Nav.Link>
                                 <Nav.Link style={{color: 'white'}}href="#link">Blog</Nav.Link>
                                 <Nav.Link style={{color: 'white'}} href="#link">Contact</Nav.Link>
-                                
-                            </Nav>
-                            <Link to="/login"><Button style={{backgroundColor: '#F9A51A',width: '104px',height: '44px',borderRadius: '5px',padding: '12px 29px'}}>Login</Button></Link>
+                            <Link to="/login"><Button style={{fontWeight:'bold',backgroundColor: '#F9A51A',width: '104px',height: '44px',borderRadius: '5px',padding: '12px 29px'}}>Login</Button></Link>
                             
                             
                         </Navbar.Collapse>

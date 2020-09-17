@@ -12,7 +12,11 @@ const TimePicker = () => {
 
     //material ui
 
-    const [selectedDate, setSelectedDate] = React.useState(new Date('2014-08-18T21:11:54'));
+    const [selectedDate, setSelectedDate] = React.useState(new Date('2020-08-18T21:11:54'));
+    const [selectedDateFrom, setSelectedDateFrom] = React.useState(new Date('2020-08-18T21:11:54'));
+    const handleDateChangeFrom = (date) => {
+      setSelectedDateFrom(date);
+    };
 
   const handleDateChange = (date) => {
     setSelectedDate(date);
@@ -22,19 +26,21 @@ const TimePicker = () => {
             <MuiPickersUtilsProvider utils={DateFnsUtils}>
       <Grid container justify="space-around">
         <KeyboardDatePicker
+        style={{fontWeight:'bold', color:'black'}}
           disableToolbar
           variant="inline"
           format="MM/dd/yyyy"
           margin="normal"
           id="date-picker-inline"
           label="From"
-          value={selectedDate}
-          onChange={handleDateChange}
+          value={selectedDateFrom}
+          onChange={handleDateChangeFrom}
           KeyboardButtonProps={{
             'aria-label': 'change date',
           }}
         />
         <KeyboardDatePicker
+        style={{fontWeight:'bold', color:'black'}}
           margin="normal"
           id="date-picker-dialog"
           label="To"
@@ -57,7 +63,6 @@ const TimePicker = () => {
         /> */}
         
       </Grid>
-      <button className="yellow-btn">Start Booking</button>
     </MuiPickersUtilsProvider>
         </div>
     );

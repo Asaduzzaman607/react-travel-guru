@@ -1,8 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { Col, Row } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
+import { Col, Form, Row } from 'react-bootstrap';
+import { Link, useParams } from 'react-router-dom';
 import fakeData from '../../fakeData/fakeData';
+import NavBarDark from '../NavBarDark/NavBarDark';
 import TimePicker from '../TimePicker/TimePicker';
+import Cox from '../../images/location/Cox.png';
+import './PlaceDetail.css'
+import { PlaceContext } from '../../App';
 
 
 const PlaceDetail = () => {
@@ -10,6 +14,10 @@ const PlaceDetail = () => {
     const {placeId} = useParams()
    
     // console.log(fakeData)
+    const [place,setPlace] = useContext(PlaceContext);
+
+    setPlace(placeId);
+
 
     const [selectedPlaces,setSelectedPlaces]=useState({})
     const {name, description}=selectedPlaces
@@ -21,26 +29,39 @@ const PlaceDetail = () => {
 
     },[placeId])
 
-    
-   
-
 
     return (
 
-        <div className="container">
-             <Row>
-                <Col xs={6} md={4}>
-                <h2>{name}</h2>
-                    <p>{description}</p>
-                </Col>
-                <Col xs={12} md={8}>
-        
-                <TimePicker></TimePicker>
-                </Col>
-            </Row>
-            
+        <section className="bg-darker" style={{height: '920px', width: '100%' }} >
+           <NavBarDark></NavBarDark>
+            <div className="row">
+                <div className="col-md-5 col-sm-12 travel-place-description">
+                    <h1 style={{color: 'white'}} >{name}</h1>
+                    <p style={{color: 'white'}} >{description}</p>
+                </div>
+                <div className="col-md-7 col-sm-12">
+                    <div className="booking-card">
+                        <Form>
+                            <Form.Group>
+                                <Form.Label style={{color:'grey'}}>Origin</Form.Label>
+                                <Form.Control style={{fontWeight:'bold', color:'black'}} value="Dhaka" type="origin"/>
+                            </Form.Group>
 
-        </div>
+                            <Form.Group>
+                                <Form.Label style={{color:'grey'}}>Destination</Form.Label>
+                                <Form.Control style={{fontWeight:'bold', color:'black'}}value={name} type="origin"  />
+                            </Form.Group>
+                            <TimePicker></TimePicker>
+                            <Link to='/hotelDetails'>
+                            <button className="yellow-btn" type="submit">
+                                Start Booking
+                            </button>
+                            </Link>
+                        </Form>
+                    </div>
+                </div>
+            </div>
+        </section>
     );
 };
 

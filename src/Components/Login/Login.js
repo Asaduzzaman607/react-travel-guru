@@ -6,7 +6,10 @@ import { initializeLoginFramework, handleGoogleSignIn, handleSignOut, handleFbSi
 import './Login.css'
 
 
+
 function Login() {
+    
+
   
   const [newUser, setNewUser] = useState(false);
   const [user, setUser] = useState({
@@ -101,20 +104,8 @@ function Login() {
 
   return (
     <div className="login-page">
-      { user.isSignedIn ? <button onClick={signOut}>Sign Out</button> :
-        <button onClick={googleSignIn}>Sign In</button>
-      }
-      <br/>
-      <button onClick={fbSignIn}>Sign in using Facebook</button>
-      {
-        user.isSignedIn && <div>
-          <p>Welcome, {user.name}!</p>
-          <p>Your email: {user.email}</p>
-          <img src={user.photo} alt=""/>
-        </div>
-      }
-
-      <h1>Our own Authentication</h1>
+      
+      <h1>Create an account</h1>
       <input type="checkbox" onChange={() => setNewUser(!newUser)} name="newUser" id=""/>
       <label htmlFor="newUser">New User Sign up</label>
       <form onSubmit={handleSubmit}>
@@ -128,7 +119,21 @@ function Login() {
       </form>
       <p style={{color: 'red'}}>{user.error}</p>
       { user.success && <p style={{color: 'green'}}>User { newUser ? 'created' : 'Logged In'} successfully</p>}
+      { user.isSignedIn ? <button onClick={signOut}>Sign Out</button> :
+        <button onClick={googleSignIn}>Continue with Google</button>
+      }
+      <br/>
+      <button onClick={fbSignIn}>Continue with Facebook</button>
+      {
+        user.isSignedIn && <div>
+          <p>Welcome, {user.name}!</p>
+          <p>Your email: {user.email}</p>
+          <img src={user.photo} alt=""/>
+        </div>
+      }
+
     </div>
+    
   );
 }
 
