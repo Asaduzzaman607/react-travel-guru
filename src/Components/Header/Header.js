@@ -13,8 +13,8 @@ const Header = () => {
 
     return (
        
-            <div className="header" >
-                <Navbar className="navbarr" bg="transparent" expand="lg">
+            <div className="header-page" >
+                <Navbar className="navbar-header" bg="transparent" expand="lg">
                         <Navbar.Brand href="/home"><img className="travel-logo" src={Logo} alt="travel-logo"></img></Navbar.Brand>
                         <Form inline>
                                 <FormControl  style={{color: 'white'}} type="text" placeholder="Search Your Destination" className="mr-sm-2" />
@@ -38,7 +38,7 @@ const Header = () => {
                         </Navbar.Collapse>
                     </Navbar>
                     <div class="container">
-                    <div class="row travel-place-cards">
+                    <div class="row travel-guru-cards">
                             <div style={{color: 'white'}} class="col-xl-3 col-md-4 col-sm-12">
                                 <h1 style={{fontWeight:'bold'}}>Cox's Bazar</h1>
                                 <p>Cox's Bazar has the world's largest unbroken sea beach which stretches more than 120 km. The entire beach is a stretch of golden sandy sea beach which is reachable by motorbike. The beach gets busy from November to early March.</p>

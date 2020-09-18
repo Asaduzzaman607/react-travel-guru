@@ -20,6 +20,7 @@ div{
     background-size:cover;
     
 }
+
 .detail h1{
     
     font-family: Bebas Neue;
@@ -32,9 +33,6 @@ div{
 .detail p{
     max-width: 80%;
     font-family:'Montserrat';
-    width: 505px;
-    height: 193px;
-    left: 135px;
     top: 350px;
     font-style: normal;
     font-weight: normal;
@@ -50,7 +48,7 @@ div{
 .booking-card{
     background: #FFFFFF;
      border-radius: 5px;      
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 5px 4px 8px 5px rgba(0,0,0,0.2);
     transition: 0.3s;
     display:inline-block;
     height:420px;
@@ -64,4 +62,3 @@ div{
     text-align: left;
     
 }
-

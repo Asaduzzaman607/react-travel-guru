@@ -1,4 +1,4 @@
-.login__container {
+.login-form {
     width: 570px;
     background: rgba(255, 255, 255, 0.2);
     border: 1px solid #ABABAB;
@@ -8,11 +8,11 @@
     margin-top: 40px;
 }
 
-.login__container input {
+.login-form input {
     width: 460px;
 }
 
-.login__forget {
+.forget-password {
     font-family: Montserrat;
     font-style: normal;
     font-weight: 500;
@@ -31,7 +31,7 @@ label {
     color: #000000 !important;
 }
 
-.login__submit-btn {
+.login-submit-btn {
     height: 50px;
     width: 460px;
     width: 462px;
@@ -49,11 +49,11 @@ label {
     border-radius: 5px;
 }
 
-.login__submit-btn:focus {
+.login-submit-btn:focus {
     outline: none;
 }
 
-.login__title {
+.login-page-title {
     font-family: Montserrat;
     font-style: normal;
     font-weight: bold;
@@ -64,11 +64,11 @@ label {
     margin-bottom: 0;
 }
 
-.login__inner-container {
+.login-page-inner {
     margin: 0 55px;
 }
 
-.login__alreadyText {
+.about-account {
     font-family: Montserrat;
     font-style: normal;
     font-weight: 500;
@@ -79,7 +79,7 @@ label {
     color: #000000;
 }
 
-.login__facebook, .login__google {
+.continue-with-facebook, .continue-with-google {
     width: 461px;
     height: 51px;
     background: #FFFFFF;
@@ -94,7 +94,7 @@ label {
     cursor: pointer;
 }
 
-.login__facebook {
+.continue-with-facebook {
     background-image: url('../../images//Icon//fb.png');
     background-position: left;
     background-repeat: no-repeat;
@@ -102,7 +102,7 @@ label {
     background-position-x: 8px;
 }
 
-.login__google {
+.continue-with-google {
     background-image: url('../../images//Icon/google.png');
     background-position: left;
     background-repeat: no-repeat;
@@ -110,7 +110,7 @@ label {
     background-position-x: 8px;
 }
 
-.login__facebook p, .login__google p {
+.continue-with-facebook p, .continue-with-google p {
     text-align: center;
     font-family: Montserrat;
     font-style: normal;

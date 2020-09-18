@@ -49,7 +49,7 @@ const Login = () => {
                 .then(res => {
                     const newUserInfo = { ...user }
                     newUserInfo.error = ''
-                    newUserInfo.success = "Your account was created successfully!"
+                    newUserInfo.success = "Your account has been created successfully!"
                     newUserInfo.name = `${user.first} ${user.last}`
                     setUser(newUserInfo)
                     updateUserName(`${user.first} ${user.last}`) // Passing the name of the user
@@ -162,9 +162,9 @@ const Login = () => {
     return (
         <div className='container'>
             <NavBar dark />
-            <div className="login__container">
-                <div className="login__inner-container">
-                    <h3 className='login__title'>Create an account</h3>
+            <div className="login-form">
+                <div className="login-page-inner">
+                    <h3 className='login-page-title'>Create an account</h3>
                     <form onSubmit={haveAccount ? handleSignIn : handleSignUp}>
                         {
                             !haveAccount &&
@@ -183,14 +183,14 @@ const Login = () => {
                                     <label htmlFor="remember">Remember Me</label>
                                 </div>
                                 <div>
-                                    <p onClick={resetPassword} className="login__forget">Forget Password</p>
+                                    <p onClick={resetPassword} className="forget-password">Forget Password</p>
                                 </div>
                             </div>
                         }
                         {!haveAccount && <TextField required onBlur={handleBlur} autoComplete="off" style={{ marginTop: '33px' }} name='confirmPassword' type='password' id="standard-basic" label="Confirm Password" />}
-                        {!haveAccount ? <input type="submit" value="Create an Account" className="login__submit-btn" /> : <input type="submit" value="Log In" className="login__submit-btn" />}
+                        {!haveAccount ? <input type="submit" value="Create an Account" className="login-submit-btn" /> : <input type="submit" value="Log In" className="login-submit-btn" />}
                     </form>
-                    <p className='login__alreadyText'>{!haveAccount ? "Already have an account?" : "Create An Account"} <span style={{ color: '#F9A51A', cursor: 'pointer', textDecoration: 'underline' }} onClick={() => setHaveAccount(!haveAccount)}>{!haveAccount ? "Login" : "Sign Up"}</span></p>
+                    <p className='about-account'>{!haveAccount ? "Already have an account?" : "Create An Account"} <span style={{ color: '#F9A51A', cursor: 'pointer', textDecoration: 'underline' }} onClick={() => setHaveAccount(!haveAccount)}>{!haveAccount ? "Login" : "Sign Up"}</span></p>
                 </div>
                 {user.error && <p style={{ color: 'red', textAlign: 'center' }}>{user.error}</p>}
                 {user.success && <p style={{ color: 'green', textAlign: 'center' }}>{user.success}</p>}
@@ -199,8 +199,8 @@ const Login = () => {
                     <p style={{ marginTop: '37px', paddingTop: '15px' }}>Or</p>
                     <div style={{ width: '200px', height: '1px', border: '1px solid #AAAAAA', marginTop: '37px' }}></div>
                 </div>
-                <div className='login__facebook' onClick={handleFbSignIn}><p>Continue With Facebook</p></div>
-                <div style={{ marginBottom: '50px' }} onClick={handleGoogleSignIn} className='login__google'><p>Continue With Google</p></div>
+                <div className='continue-with-facebook' onClick={handleFbSignIn}><p>Continue With Facebook</p></div>
+                <div style={{ marginBottom: '50px' }} onClick={handleGoogleSignIn} className='continue-with-google'><p>Continue With Google</p></div>
             </div>
         </div>
     );

@@ -33,14 +33,14 @@ const PlaceDetail = () => {
     return (
 
         <section className="bg-darker" >
-            <div style={{ width:'90%',  margin:'auto'}}>
+            <div style={{ width:'80%',  margin:'auto'}}>
             <NavBarDark></NavBarDark>
             <div className="row detail" >
-                <div className="col-md-5 col-sm-12 travel-place-description">
+                <div className="col-md-6 col-sm-12 ">
                     <h1 style={{color: 'white',textTransform: 'uppercase'}} >{name}</h1>
                     <p style={{color: 'white'}} >{description}</p>
                 </div>
-                <div className="col-md-7 col-sm-12">
+                <div className="col-md-6 col-sm-12">
                     <div className="booking-card">
                         <Form className="form">
                             <Form.Group>
